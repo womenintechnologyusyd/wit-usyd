@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars')
 const app = express()
 const url = require('url')
 var hbs = require('hbs');
+const port = process.env.PORT || 8080;
 
 hbs.registerHelper('helper_name', function(value) { 
   return value
@@ -266,6 +267,6 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs')
 app.set('views', 'views')
 
-app.listen(8080, function() {
+app.listen(port, function() {
   console.log('Listening on port 8080! Insert localhost:8080 in Storyblok')
 })
