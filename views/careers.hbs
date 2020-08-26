@@ -1,0 +1,18 @@
+<body id="home">
+    <main id="careers-page" class="main-grid">
+        <section id="careers-article-link-listing" class="global-article-link-listing">
+                <h1><span>//</span> Careers</h1>
+                {{#each careers_list}}
+                <article class="global-article-link careers-article-link">
+                    <img class="careers-article-image" src="{{this.company_logo.filename}}">
+                    <div class="careers-article-link-information">
+                        <h4>{{this.company_name}}<p>{{this.company_location}}</p></h4>
+                        <h5 class="slight">Applications Close:<p>{{this.closing_date}}</p></h5>
+                        <h5><a class="launch" href="{{this.external_link.url}}" target="_blank">Apply Now <i class="fas fa-external-link-alt"></i></a></h5>
+                    </div>
+                    <a href="{{this.internal_link.url}}" class="source-link careers-article-link-description">{{this.position_title}}<p>{{this.position_description}}</p></a>
+                </article>
+                {{/each}}
+        </section>
+    </main>
+</body>

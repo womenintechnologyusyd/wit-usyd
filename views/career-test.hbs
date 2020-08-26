@@ -1,0 +1,31 @@
+<body id="home">
+        <main id="careers-opportunity-1-page" class="main-grid">
+            <h1 id="career-name">{{position_title}}</h1>
+            <section id="opportunity-description">
+                <p>{{position_description}}</p>
+                {{#if how_to_apply}}
+                    <h2>How to Apply</h2>
+                    <p>{{how_to_apply}}</p>
+                {{/if}}
+
+                {{!-- <h2>How to apply</h2>
+                <p>Email your resume and portfolio content to <u id="copyable">live@email.com<a class="tooltip">Copy</a></u></p> --}}
+            </section>
+            <img class="careers-article-image" src="{{company_logo.filename}}">
+            <section id="opportunity-details">
+                <h4>{{company_name}}</h4>
+                <div class="detail-breaker"></div>
+                <h4 class="slight">Location: <p>{{company_location}}</p></h4>
+
+                <h4 class="slight">Applications close: <p>{{closing_date}}</p></h4>
+
+                <h4 class="slight">Employment type: <p>{{employment_type}}</p> </h4>
+
+                <h4 class="slight">Remuneration: <p>{{remuneration}}</p></h4>
+
+                <h4 class="slight">Commences: <p>{{commences}}</p></h4>
+
+                <h5 class="marker"><a class="launch" href="{{external_link.url}}">Apply Now <i class="fas fa-external-link-alt"></i></a></h5>
+            </section>
+        </main>
+    </body>

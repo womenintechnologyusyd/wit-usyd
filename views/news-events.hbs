@@ -1,0 +1,47 @@
+<body id="home">
+    <main id="news-events-page" class="main-grid">
+        <h1><span>//</span> Events</h1>
+        <section id="events" class="desktop">
+
+            <article class="slider desktop">
+                {{#each event_slider}}
+                <figure class="slide"><a href="{{this.title}}"><img alt="{{this.alt}}" src="{{this.filename}}"></a></figure>
+                {{/each}}
+            </article>
+            
+            <div id="slider-buttons">
+
+            </div>
+
+        </section>
+
+        <section id="news-article-link-listing" class="global-article-link-listing main-grid">
+            <h1><span>//</span> News</h1>
+
+            {{#each news_list}}
+            <article class="global-article-link news-article-link">
+                <img class="news-article-image" src="{{this.image.filename}}">
+                <a href="{{this.link.url}}" class="source-link news-article-description">{{this.title}}<p>{{this.description}}</p></a>
+                <a class="icon-link news-share" target="_blank" download="newfilename"><img class="share-icon" src="../public/assets/global/share-icon.svg"></a>
+                <div class="share-modal invisi">
+                    <h4>Share</h4>
+                    <div class="share-links">
+                        <a class="share-modal-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{this.link.url}}" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+                        </a>
+                        <a class="share-modal-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{this.link.url}}&title=&summary=&source=" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+                        </a>
+                        <a class="share-modal-hyperlink" alt="{{this.link.url}}">
+                            <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24" width="24"><path class="resize" d="M5.006 0c2.765,0 5.007,2.241 5.007,5.006 0,2.765 -2.242,5.007 -5.007,5.007 -2.765,0 -5.006,-2.242 -5.006,-5.007 0,-2.765 2.241,-5.006 5.006,-5.006zm1.685 4.571c-0.115,0.115 -0.115,0.301 0,0.416 0.115,0.115 0.302,0.115 0.417,0l0.208 -0.208c0.572,-0.572 0.572,-1.51 0,-2.082 -0.572,-0.573 -1.51,-0.573 -2.082,0l-0.932 0.931c-0.572,0.572 -0.572,1.51 0.001,2.082 0.115,0.115 0.301,0.115 0.416,0 0.115,-0.115 0.115,-0.301 0,-0.416 -0.344,-0.344 -0.344,-0.906 0,-1.25l0.931 -0.931c0.344,-0.344 0.906,-0.344 1.25,0 0.344,0.344 0.344,0.905 0,1.249l-0.209 0.209zm-3.37 0.871c0.115,-0.115 0.115,-0.302 0,-0.417 -0.115,-0.115 -0.301,-0.115 -0.416,0l-0.208 0.209c-0.572,0.572 -0.572,1.51 0,2.082 0.572,0.573 1.509,0.573 2.082,0l0.931 -0.931c0.573,-0.573 0.573,-1.51 0,-2.083 -0.115,-0.115 -0.301,-0.115 -0.416,0 -0.115,0.115 -0.115,0.302 0,0.417 0.343,0.344 0.344,0.906 0,1.249l-0.932 0.932c-0.343,0.343 -0.905,0.343 -1.249,0 -0.344,-0.344 -0.344,-0.905 0,-1.25l0.208 -0.208z"/></svg>
+                        </a>
+                        <a class="tooltip">Copy</a>
+                    </div>
+                </div>
+            </article>
+            {{/each}}
+
+        </section>
+    </main>
+</body>
+<script src="../public/js/news-events-script.js"></script>

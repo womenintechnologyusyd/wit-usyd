@@ -1,0 +1,56 @@
+{{#story.content}}
+  {{> (lookup . 'component') }}
+{{/story.content}}
+
+<body id="home">
+    <main id="half-width" class="main-grid">
+        <section id="landing">
+            <img class="d" src="{{landing_splash_image.filename}}">
+            <img class="m" src="{{landing_splash_image_m.filename}}">
+            <article id="landing-quote">
+                <h1>{{{landing_heading}}}</h1>
+                <h3>{{landing_quote}}</h3>
+                <a class="call-to-action" href="sign-up"><i class="fas fa-plus"></i>Join us now</a>
+            </article>
+        </section>
+
+        <section id="story1">
+            <h1>{{sponsor_title}}</h1>
+            <h3>{{sponsor_description}}</h3> 
+            <section id="slider-wrapper">
+                <article class="slider">
+                    {{#each sponsor_images}}
+                    <figure class="slide"><img src="{{this.filename}}"></figure>
+                    {{/each}}
+                </article>
+            </section>
+        </section>
+
+        <section id="story2">
+            <h1>{{society_goals_title}}</h1>
+            <article>
+                {{#each society_goals}}
+                <article>
+                    <img src="{{this.illustration.filename}}">
+                    <h3>{{this.main}}<h5>{{this.sub}}</h5></h3>
+                </article>
+                {{/each}}
+            </article>
+            <article id="goals">
+                <h2>{{society_values_title}}</h2>
+                </br>
+                <div>
+                    {{#each society_values}}
+                    <figure><img src="{{this.icon.filename}}"><h3>{{this.value}}</h3></figure>
+                    {{/each}}
+                </div>
+                <h5 class="attribution-text">{{attribution}}</h5>
+            </article>
+        </section>
+
+        <section id="story3">
+            <h2>{{cta_text}}</h2><a class="call-to-action" href="sign-up"><i class="fas fa-plus"></i> Join us now</a>
+        </section>
+    </main>
+</body>
+<script src="../public/js/index-slider.js"></script>

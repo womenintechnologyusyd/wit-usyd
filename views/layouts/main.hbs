@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+  <script src="https://kit.fontawesome.com/4be1b0868a.js" crossorigin="anonymous"></script>
+  <title>{{ title }} - Women In Technology USYD</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/public/assets/global/fav.ico"/>
+  <link rel="stylesheet" type="text/css" href="/public/css/usydwitstyles.css">
+</head>
+
+  <header>
+      <a href="/" id="home-link">
+          <img src="../public/assets/global/wit.png">
+          <h3>Women in Technology</br> Society @ USYD</h3>
+      </a>
+      <p></p>
+      <a class="page-link about" href="about">About<div></div></a>
+      <a class="page-link news-events" href="news-events">News & Events<div></div></a>
+      <a class="page-link careers" href="careers">Careers<div></div></a>
+      <a class="page-link newsletters" href="newsletters">Newsletters<div></div></a>
+      <a class="page-link resources" href="resources">Resources<div></div></a>
+      <button class="menu-arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.77 12.26"><polygon class="cls-1" points="9.39 6.52 9.39 6.52 9.38 6.52 2.87 0 0 2.87 9.38 12.26 9.39 12.25 9.39 12.26 18.77 2.87 15.91 0 9.39 6.52"/></svg>
+      </button>
+  </header>
+  <nav>
+      <a class="page-link about" href="about">About<div></div></a>
+      <a class="page-link news-events" href="news-events">News & Events<div></div></a>
+      <a class="page-link careers" href="careers">Careers<div></div></a>
+      <a class="page-link newsletters" href="newsletters">Newsletters<div></div></a>
+      <a class="page-link resources" href="resources">Resources<div></div></a>
+  </nav>
+
+  {{{body}}}
+
+  <script type="text/javascript" src="//app.storyblok.com/f/storyblok-latest.js"></script>
+  <script type="text/javascript">
+    storyblok.init()
+
+    // On the change event refresh the window
+    storyblok.on('change', function() {
+      window.location.reload(true)
+    })
+
+    // Listen on the published event to clear the cache
+    storyblok.on('published', function() {
+      window.location.reload(true)
+    })
+  </script>
+  <script src="../public/js/script.js"></script>
+      <footer>
+        <a href="https://www.usu.edu.au/" target="_blank"><img id="usu" src="../public/assets/global/whiteusulogo.png"></a>
+        <h3>Women in Technology</br> Society @ USYD</h3>
+        <div id="social">
+            <a id="fb-link" href="https://www.facebook.com/witusyd/" target="_blank"><svg id="fb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg></a>
+            <a id="linkedin-link" href="https://www.linkedin.com/company/37176777" target="_blank"><svg id="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M12,0A12,12,0,1,0,24,12,12,12,0,0,0,12,0ZM8.51,18.14H5.59V9.35H8.51Zm-1.46-10H7a1.52,1.52,0,1,1,0-3,1.52,1.52,0,1,1,0,3Zm12,10H16.13v-4.7c0-1.18-.42-2-1.48-2a1.6,1.6,0,0,0-1.5,1.07,1.94,1.94,0,0,0-.1.71v4.91H10.13s0-8,0-8.79h2.92v1.24a2.89,2.89,0,0,1,2.63-1.45c1.93,0,3.37,1.26,3.37,4v5Z"/></g></g></svg></a>
+        </div>
+    </footer>
+
+    <a id="email" href="mailto:womenintechusyd@gmail.com?subject=Enquiry%20about%20Women%20In%20Technology%20USYD"><img src="../public/assets/global/email-us.png" width="50"></a>
+    <svg id="email-label" class="round-label" width="170" height="100" xmlns="http://www.w3.org/2000/svg" >
+        <path id="curve" d="M 0 60 A 60 60 0 1 1 120 60" />
+        <text width="10">
+        <textPath id="text-path-text" xlink:href="#curve">
+            EMAIL US
+        </textPath>
+        </text>
+    </svg>
+    <a id="sign-up" href="sign-up"><img src="../public/assets/global/sign-up.png" width="50"></a>
+    <svg id="sign-up-label" class="round-label" width="170" height="100" xmlns="http://www.w3.org/2000/svg" >
+        <path id="curve" d="M 0 60 A 60 60 0 1 1 120 60" />
+        <text width="10">
+        <textPath id="text-path-text" xlink:href="#curve">
+            JOIN WIT
+        </textPath>
+        </text>
+    </svg>
+</html>
